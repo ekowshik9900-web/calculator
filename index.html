@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Minimalist Calculator</title>
+  <!-- Link to the external CSS stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Main Calculator Card Container -->
+  <main class="calculator-wrapper">
+    <div class="calculator" role="region" aria-label="Calculator">
+
+      <!-- Display Screen Area -->
+      <section class="display" aria-live="polite">
+        <!-- Previous calculation / active operation history -->
+        <div class="previous-operand" id="previousOperand" aria-hidden="true"></div>
+        <!-- Current input or calculation result -->
+        <div class="current-operand" id="currentOperand">0</div>
+      </section>
+
+      <!-- Keypad Grid (Built using CSS Grid) -->
+      <section class="keypad">
+        <!-- Row 1: Function Keys & Divide -->
+        <button type="button" class="btn btn-function" data-action="all-clear" id="clearBtn">AC</button>
+        <button type="button" class="btn btn-function" data-action="toggle-sign">+/-</button>
+        <button type="button" class="btn btn-function" data-action="percent">%</button>
+        <button type="button" class="btn btn-operator" data-action="operator" data-value="÷">÷</button>
+
+        <!-- Row 2: 7, 8, 9 & Multiply -->
+        <button type="button" class="btn btn-number" data-action="number" data-value="7">7</button>
+        <button type="button" class="btn btn-number" data-action="number" data-value="8">8</button>
+        <button type="button" class="btn btn-number" data-action="number" data-value="9">9</button>
+        <button type="button" class="btn btn-operator" data-action="operator" data-value="×">×</button>
+
+        <!-- Row 3: 4, 5, 6 & Subtract -->
+        <button type="button" class="btn btn-number" data-action="number" data-value="4">4</button>
+        <button type="button" class="btn btn-number" data-action="number" data-value="5">5</button>
+        <button type="button" class="btn btn-number" data-action="number" data-value="6">6</button>
+        <button type="button" class="btn btn-operator" data-action="operator" data-value="−">−</button>
+
+        <!-- Row 4: 1, 2, 3 & Add -->
+        <button type="button" class="btn btn-number" data-action="number" data-value="1">1</button>
+        <button type="button" class="btn btn-number" data-action="number" data-value="2">2</button>
+        <button type="button" class="btn btn-number" data-action="number" data-value="3">3</button>
+        <button type="button" class="btn btn-operator" data-action="operator" data-value="+">+</button>
+
+        <!-- Row 5: 0 (Spans 2 columns), Decimal Point & Equals -->
+        <button type="button" class="btn btn-number btn-zero" data-action="number" data-value="0">0</button>
+        <button type="button" class="btn btn-number" data-action="number" data-value=".">.</button>
+        <button type="button" class="btn btn-operator btn-equals" data-action="calculate">=</button>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Link to the external JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
+
